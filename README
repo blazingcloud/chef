@@ -1,0 +1,15 @@
+These recipes will only run on ubuntu instances. They have only been run
+with Lucid Lynx. Refer to chef documentation on how to install chef for
+your environment.
+
+== Installing chef on ec2 ==
+
+# Copy the chef directory to your ec2 instance
+
+    % scp -r -i <pem_file> -r <chef_dir> ubuntu@<ec2_public_domain>:
+
+# Then run install from there
+
+    % ssh -i <pem_file> ubuntu@<ec2_public_domain>
+    ec2% cd chef
+    ec2% ./install.sh
